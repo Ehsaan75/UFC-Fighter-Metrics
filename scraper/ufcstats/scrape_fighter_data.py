@@ -1,5 +1,5 @@
-import requests
-from bs4 import BeautifulSoup
+import requests  # type: ignore
+from bs4 import BeautifulSoup  # type: ignore
 import csv
 
 def scrape_fighter(url):
@@ -32,15 +32,15 @@ def scrape_fighter(url):
             if label in stats:
                 stats[label] = value
 
-    # Extract the specific values from the dictionary
-    slpm = stats['SLpM']
-    str_acc = stats['Str. Acc.']
-    sapm = stats['SApM']
-    str_def = stats['Str. Def']
-    t_avg = stats['TD Avg.']
-    t_acc = stats['TD Acc.']
-    t_def = stats['TD Def.']
-    sub_avg = stats['Sub. Avg.']
+    # Extract the specific values from the dictionary with `.get()` to avoid KeyError
+    slpm = stats.get('SLpM', "0.00")
+    str_acc = stats.get('Str. Acc.', "0%")
+    sapm = stats.get('SApM', "0.00")
+    str_def = stats.get('Str. Def', "0%")
+    t_avg = stats.get('TD Avg.', "0.00")
+    t_acc = stats.get('TD Acc.', "0%")
+    t_def = stats.get('TD Def.', "0%")
+    sub_avg = stats.get('Sub. Avg.', "0.00")
 
     # Initialize stats counters
     wins = losses = ko_wins = sub_wins = dec_wins = 0
@@ -81,9 +81,6 @@ def scrape_fighter(url):
         'submission_avg': sub_avg,
         'wins': wins,
         'losses': losses,
-        'ko_wins': ko_wins,
-        'sub_wins': sub_wins,
-        'dec_wins': dec_wins
     }
 
 def main():
@@ -102,7 +99,7 @@ def main():
     headers = [
         'fighter_name', 'strikes_per_min', 'striking_accuracy', 'strikes_absorbed_per_min',
         'striking_defense', 'takedown_avg', 'takedown_accuracy', 'takedown_defense',
-        'submission_avg', 'wins', 'losses', 'ko_wins', 'sub_wins', 'dec_wins'
+        'submission_avg', 'wins', 'losses'
     ]
 
     # Write to CSV file
