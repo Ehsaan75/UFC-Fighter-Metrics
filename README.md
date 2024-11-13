@@ -121,3 +121,8 @@ To run the tests, use the following command:
 
 ```bash
 python -m unittest discover tests/
+```
+
+## Conclusion
+
+The analysis of UFC fighter metrics reveals that certain metrics, such as **strikes per minute**, **striking accuracy**, and **takedown defense**, are highly correlated with a fighter's success. Machine learning models trained on these metrics show promising results in predicting a fighter's success rate. Future work could include expanding the dataset, incorporating additional metrics, and fine-tuning the machine learning models for better accuracy.
