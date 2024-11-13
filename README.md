@@ -49,7 +49,7 @@ Scatter plots were used to show the relationship between key fighter metrics and
 - **Striking accuracy**: The correlation with win percentage is slightly positive, but not very strong. Accuracy seems to play a role, but other factors could be more significant.
 - **Takedown accuracy** and **Takedown defense**: Both these metrics show a stronger relationship with win percentage. Fighters with higher takedown accuracy and better defense generally tend to have better success.
 
-![Scatter Plots](screenshots/scatter_plots.png)
+![Scatter Plots](screenshots/scatter_plots.PNG)
 
 ### Box Plots
 
@@ -59,7 +59,7 @@ Box plots display the distribution of metrics for fighters with high and low suc
 - Fighters with **high success** tend to have a wider range of values in metrics such as **strikes per minute**, **striking accuracy**, and **takedown avg**.
 - Fighters with **low success** show more consistency in their metrics, especially in **striking accuracy** and **submission average**.
 
-![Box Plots](screenshots/box_plots.png)
+![Box Plots](screenshots/box_plots.PNG)
 
 ### Bar Plots
 
@@ -70,7 +70,7 @@ Bar plots were used to compare the average values of each metric for fighters cl
 - **Striking accuracy** and **submission avg**: Fighters with low success tend to have lower values, while high-success fighters tend to have better stats.
 - **Takedown accuracy and defense**: Fighters with high success are generally more proficient in these areas, confirming that defensive and offensive skills in grappling are essential for success.
 
-![Bar Plots](screenshots/bar_plots.png)
+![Bar Plots](screenshots/bar_plots.PNG)
 
 ### Heatmap
 
@@ -81,7 +81,7 @@ A heatmap was used to show the correlation between various fighter metrics, help
 - **Takedown accuracy** and **takedown defense** show a strong positive correlation, indicating that fighters who are good at defending takedowns also tend to have better takedown skills.
 - **Win percentage** and **high success** show a high positive correlation, as expected.
 
-![Heatmap](screenshots/heatmap.png)
+![Heatmap](screenshots/heatmap.PNG)
 
 ## Findings
 
@@ -97,7 +97,7 @@ A **Random Forest Classifier** model was trained to predict whether a fighter is
 
 The confusion matrix was used to evaluate the performance of the classification model. It shows how well the model correctly classifies high and low success fighters.
 
-![Confusion Matrix](screenshots/confusion_matrix.png)
+![Confusion Matrix](screenshots/confusion_matrix.PNG)
 
 #### Findings:
 - The model shows a reasonably balanced classification of **low success** (2 correctly classified) and **high success** (2 correctly classified).
@@ -107,7 +107,7 @@ The confusion matrix was used to evaluate the performance of the classification 
 
 This plot shows the importance of each metric in determining the fighter's success. **Strikes per minute**, **striking accuracy**, and **striking defense** were identified as the most significant features influencing success.
 
-![Feature Importance](screenshots/feature_importance.png)
+![Feature Importance](screenshots/feature_importance.PNG)
 
 ## Unit Tests
 
